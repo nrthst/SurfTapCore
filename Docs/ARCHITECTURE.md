@@ -45,7 +45,7 @@ Near-term height ranges, the breaking-wave estimate and dominant-swell selection
 
 ## Breaking-wave model
 
-`SurfMath.breakingWaveHeight` implements Komar and Gaughan (1972), `Hb = 0.39 · g^(1/5) · (T · H0² · cos θ)^(2/5)`. It was chosen over an app-specific empirical fit because it is published, has one fixed coefficient, and can be checked by hand. The `cos θ` term is Snell's-law refraction over straight, parallel depth contours (`Kr² = cos θ / cos θb`) with the breaking angle taken as zero.
+`SurfMath.breakingWaveHeight` implements Komar and Gaughan (1972), `Hb = 0.39 · g^(1/5) · (T · H0² · cos θ)^(2/5)`. It was chosen over a hand-tuned empirical fit because it is published, has one fixed coefficient, and can be checked by hand. The `cos θ` term is Snell's-law refraction over straight, parallel depth contours (`Kr² = cos θ / cos θb`) with the breaking angle taken as zero.
 
 The rules around it are deliberately strict:
 

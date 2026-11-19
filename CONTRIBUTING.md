@@ -1,6 +1,6 @@
 # Contributing
 
-Keep this package useful without depending on the SurfTap app. Bug fixes, documentation, additional providers, and well-tested improvements to forecast calculations are welcome.
+Keep this package a general-purpose engine that does not assume any particular app or platform. Bug fixes, documentation, additional providers, and well-tested improvements to forecast calculations are welcome.
 
 ## Development
 
@@ -14,6 +14,6 @@ Explain the problem and changed behavior. Add regression tests for bugs and mean
 
 Document any new assumptions or heuristics. Model-derived wave heights and breaking-wave estimates must not be presented as verified or observed surf heights. Changes to a formula need a published source and tests against hand-worked values. New providers belong in separate adapters conforming to `ForecastProvider`.
 
-Avoid adding dependencies unless there is a concrete benefit that justifies their maintenance and licensing cost. Do not include artwork, app screens, signing files, credentials, build outputs, or exports from the original app repository.
+Avoid adding dependencies unless there is a concrete benefit that justifies their maintenance and licensing cost. Do not include artwork, app screens, signing files, credentials, build outputs, or files copied from private projects.
 
 Contributions are provided under this repository's MIT license. Submit only material you are entitled to contribute. Security issues should follow [SECURITY.md](SECURITY.md).

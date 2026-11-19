@@ -18,10 +18,10 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   ~~~~    ~~~~~~~      ~~~~~        ~~~~~~~~      ~~~~~       ~~~~~~
 
-              S U R F T A P   C O R E   ·   waves on your wrist
+                         S U R F T A P   C O R E
 ```
 
-The forecast engine behind a surf app, ready to use in your own project.
+A surf forecast engine for Swift.
 
 SurfTap Core is a small Swift package that turns a marine forecast into what a surfer wants to know at a particular beach: roughly how big the waves will break, which swell is doing the work, whether the wind is onshore or offshore, and where the tide is heading. A separate Stormglass adapter connects it to live weather and tide data using **your own API key**.
 
@@ -46,7 +46,7 @@ What it does:
 - **Tides.** Interpolated height, rising/falling trend and the next high or low, without extrapolating past the data.
 - **Honest gaps.** Missing values stay `nil`, failed tide requests are reported, and nothing is guessed from a coordinate.
 
-This repository contains the reusable engine. The SurfTap watch app, screens, artwork, complications, branding assets, GPS tracking, and HealthKit integration are outside this package.
+It is a library, not an app: it has no user interface, location tracking, or persistent storage. Those belong to whatever you build with it.
 
 **Status:** pre-1.0. The public API may change between minor versions until 1.0. No third-party package dependencies. Swift 6 language mode.
 
@@ -230,4 +230,4 @@ swift build -c release
 
 You may use, modify, and distribute this code, including commercially. Keep the copyright notice and complete MIT license with copies or substantial portions of the code. For a compiled app, include them in your distributed third-party notices or equivalent license materials. MIT does not require a visible in-app badge, promotional credit, or publication of your own source code. See [ATTRIBUTION.md](ATTRIBUTION.md) for a suggested credit.
 
-The license covers the files distributed in this package; no private app UI or artwork is included. The project is not affiliated with or endorsed by Stormglass.
+The license covers the files distributed in this package. The project is not affiliated with or endorsed by Stormglass.
