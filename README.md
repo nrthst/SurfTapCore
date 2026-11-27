@@ -74,7 +74,28 @@ Tests make no external requests and need no credentials.
 
 Declared minimum deployment targets: macOS 13, iOS 16, watchOS 9 and tvOS 16. The source also supports Linux through FoundationNetworking. CI is configured for macOS and Linux; consult the actual run results before assuming a platform has passed.
 
-For local integration, add this directory as a local Swift package in Xcode, or add `.package(path: "../SurfTapCore")` to another package. Add `SurfTapCore` and `SurfTapStormglass` to your target's product dependencies. After publication, use the new repository URL as a Swift Package Manager dependency.
+## Install
+
+Add the package to your `Package.swift`:
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/nrthst/SurfTapCore.git", .upToNextMinor(from: "0.1.0")),
+],
+targets: [
+    .target(
+        name: "YourTarget",
+        dependencies: [
+            .product(name: "SurfTapCore", package: "SurfTapCore"),
+            .product(name: "SurfTapStormglass", package: "SurfTapCore"),
+        ]
+    ),
+]
+```
+
+In Xcode, choose File > Add Package Dependencies, enter `https://github.com/nrthst/SurfTapCore.git`, and add `SurfTapCore` and `SurfTapStormglass` to your target. `SurfTapStormglass` is only needed for live data.
+
+Until 1.0 a minor version may change the public API, so `.upToNextMinor` keeps updates to bug fixes; read the release notes before moving to a new minor version.
 
 ## Define a spot
 
